@@ -1,0 +1,12 @@
+D:\CSCC 33\FinalC2\FinalC2\bin\Debug\FinalC2.exe.config
+D:\CSCC 33\FinalC2\FinalC2\bin\Debug\FinalC2.exe
+D:\CSCC 33\FinalC2\FinalC2\bin\Debug\FinalC2.pdb
+D:\CSCC 33\FinalC2\FinalC2\bin\Debug\FinalC2.xml
+D:\CSCC 33\FinalC2\FinalC2\obj\Debug\FinalC2.vbprojAssemblyReference.cache
+D:\CSCC 33\FinalC2\FinalC2\obj\Debug\FinalC2.Form1.resources
+D:\CSCC 33\FinalC2\FinalC2\obj\Debug\FinalC2.Resources.resources
+D:\CSCC 33\FinalC2\FinalC2\obj\Debug\FinalC2.vbproj.GenerateResource.cache
+D:\CSCC 33\FinalC2\FinalC2\obj\Debug\FinalC2.vbproj.CoreCompileInputs.cache
+D:\CSCC 33\FinalC2\FinalC2\obj\Debug\FinalC2.exe
+D:\CSCC 33\FinalC2\FinalC2\obj\Debug\FinalC2.xml
+D:\CSCC 33\FinalC2\FinalC2\obj\Debug\FinalC2.pdb

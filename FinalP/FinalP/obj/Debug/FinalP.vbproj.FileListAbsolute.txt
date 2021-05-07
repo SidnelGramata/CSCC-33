@@ -1,0 +1,12 @@
+D:\CSCC 33\FinalP\FinalP\bin\Debug\FinalP.exe.config
+D:\CSCC 33\FinalP\FinalP\bin\Debug\FinalP.exe
+D:\CSCC 33\FinalP\FinalP\bin\Debug\FinalP.pdb
+D:\CSCC 33\FinalP\FinalP\bin\Debug\FinalP.xml
+D:\CSCC 33\FinalP\FinalP\obj\Debug\FinalP.vbprojAssemblyReference.cache
+D:\CSCC 33\FinalP\FinalP\obj\Debug\FinalP.Form1.resources
+D:\CSCC 33\FinalP\FinalP\obj\Debug\FinalP.Resources.resources
+D:\CSCC 33\FinalP\FinalP\obj\Debug\FinalP.vbproj.GenerateResource.cache
+D:\CSCC 33\FinalP\FinalP\obj\Debug\FinalP.vbproj.CoreCompileInputs.cache
+D:\CSCC 33\FinalP\FinalP\obj\Debug\FinalP.exe
+D:\CSCC 33\FinalP\FinalP\obj\Debug\FinalP.xml
+D:\CSCC 33\FinalP\FinalP\obj\Debug\FinalP.pdb
