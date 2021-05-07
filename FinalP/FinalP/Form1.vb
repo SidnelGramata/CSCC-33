@@ -77,9 +77,9 @@ Public Class Form1
                             Dim RawData As String = RX.ReadLine
                             If Client.Client.Connected = True AndAlso Client.Connected = True AndAlso Client.GetStream.CanRead = True Then
                                 REM For some reason this seems to stop the comon tcp connection bug vvv
-                                Dim RawDataLength As String = RawData.Length.ToString
+                                ' Dim RawDataLength As String = RawData.Length.ToString
                                 REM ^^^^ Comment it out and test it in your own projects. Mine might be the only stupid one.
-                                RichTextBox1.Text += Client.Client.RemoteEndPoint.ToString + ">>" + RawData + vbNewLine
+                                RichTextBox1.Text += "[" + Client.Client.RemoteEndPoint.ToString + "]: " + RawData + vbNewLine
                             Else Exit While
                             End If
                         End While

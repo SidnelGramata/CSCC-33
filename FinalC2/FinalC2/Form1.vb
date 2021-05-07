@@ -29,9 +29,9 @@ Public Class Form1
                 While RX.BaseStream.CanRead = True
                     Dim RawData As String = RX.ReadLine
                     If RawData.ToUpper = "/MSG" Then
-                        Threading.ThreadPool.QueueUserWorkItem(AddressOf MSG1, "Hello World.")
+                        Threading.ThreadPool.QueueUserWorkItem(AddressOf MSG1)
                     Else
-                        RichTextBox1.Text += "Server>>" + RawData + vbNewLine
+                        RichTextBox1.Text += "[Server]: " + RawData + vbNewLine
                     End If
                 End While
             Catch ex As Exception
@@ -81,20 +81,16 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
-    End Sub
-
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         If TextBox1.Text.Length > 0 Then
-            SendToServer(TextBox1.Text + " Increased")
+            SendToServer("(Warehouse 2) " + TextBox1.Text + " Increased")
             TextBox1.Clear()
         End If
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         If TextBox1.Text.Length > 0 Then
-            SendToServer(TextBox1.Text + " Decreased")
+            SendToServer("(Warehouse 2) " + TextBox1.Text + " Decreased")
             TextBox1.Clear()
         End If
     End Sub

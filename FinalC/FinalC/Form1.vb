@@ -31,7 +31,7 @@ Public Class Form1
                     If RawData.ToUpper = "/MSG" Then
                         Threading.ThreadPool.QueueUserWorkItem(AddressOf MSG1, "Hello World.")
                     Else
-                        RichTextBox1.Text += "Server>>" + RawData + vbNewLine
+                        RichTextBox1.Text += "[Server]: " + RawData + vbNewLine
                     End If
                 End While
             Catch ex As Exception
@@ -98,5 +98,9 @@ Public Class Form1
             SendToServer(TextBox1.Text + " Decreased")
             TextBox1.Clear()
         End If
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
     End Sub
 End Class

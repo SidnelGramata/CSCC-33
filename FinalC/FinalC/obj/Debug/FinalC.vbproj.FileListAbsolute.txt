@@ -10,3 +10,15 @@ D:\CSCC 33\FinalC\FinalC\obj\Debug\FinalC.vbproj.CoreCompileInputs.cache
 D:\CSCC 33\FinalC\FinalC\obj\Debug\FinalC.exe
 D:\CSCC 33\FinalC\FinalC\obj\Debug\FinalC.xml
 D:\CSCC 33\FinalC\FinalC\obj\Debug\FinalC.pdb
+C:\Users\Administrator\Documents\GitHub\CSCC-33\FinalC\FinalC\bin\Debug\FinalC.exe.config
+C:\Users\Administrator\Documents\GitHub\CSCC-33\FinalC\FinalC\bin\Debug\FinalC.exe
+C:\Users\Administrator\Documents\GitHub\CSCC-33\FinalC\FinalC\bin\Debug\FinalC.pdb
+C:\Users\Administrator\Documents\GitHub\CSCC-33\FinalC\FinalC\bin\Debug\FinalC.xml
+C:\Users\Administrator\Documents\GitHub\CSCC-33\FinalC\FinalC\obj\Debug\FinalC.vbprojAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\CSCC-33\FinalC\FinalC\obj\Debug\FinalC.Form1.resources
+C:\Users\Administrator\Documents\GitHub\CSCC-33\FinalC\FinalC\obj\Debug\FinalC.Resources.resources
+C:\Users\Administrator\Documents\GitHub\CSCC-33\FinalC\FinalC\obj\Debug\FinalC.vbproj.GenerateResource.cache
+C:\Users\Administrator\Documents\GitHub\CSCC-33\FinalC\FinalC\obj\Debug\FinalC.vbproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\GitHub\CSCC-33\FinalC\FinalC\obj\Debug\FinalC.exe
+C:\Users\Administrator\Documents\GitHub\CSCC-33\FinalC\FinalC\obj\Debug\FinalC.xml
+C:\Users\Administrator\Documents\GitHub\CSCC-33\FinalC\FinalC\obj\Debug\FinalC.pdb
