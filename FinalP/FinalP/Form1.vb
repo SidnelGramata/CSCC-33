@@ -60,7 +60,7 @@ Public Class Form1
 
         Try
             Using Client As TcpClient = Server.AcceptTcpClient
-                ''     Console.Beep()
+                Console.Beep()
 
                 If ServerTrying = False Then
                     Threading.ThreadPool.QueueUserWorkItem(AddressOf Handler_Client)
@@ -76,9 +76,6 @@ Public Class Form1
                         While RX.BaseStream.CanRead = True
                             Dim RawData As String = RX.ReadLine
                             If Client.Client.Connected = True AndAlso Client.Connected = True AndAlso Client.GetStream.CanRead = True Then
-                                REM For some reason this seems to stop the comon tcp connection bug vvv
-                                ' Dim RawDataLength As String = RawData.Length.ToString
-                                REM ^^^^ Comment it out and test it in your own projects. Mine might be the only stupid one.
                                 RichTextBox1.Text += "[" + Client.Client.RemoteEndPoint.ToString + "]: " + RawData + vbNewLine
                             Else Exit While
                             End If
@@ -91,13 +88,6 @@ Public Class Form1
                     End If
 
                 End Try
-
-
-                ''   If RX.BaseStream.CanRead = False Then
-                ''   Client.Close()
-                ''   Clients.Remove(Client)
-                ''   End If
-                ''   Console.Beep()
             End Using
             If Clients.Contains(TempClient) Then
                 Clients.Remove(TempClient)
@@ -115,19 +105,17 @@ Public Class Form1
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Threading.ThreadPool.QueueUserWorkItem(AddressOf SendToClients, TextBox1.Text)
+        TextBox1.Clear()
     End Sub
     Function SendToClients(ByVal Data As String)
         If ServerStatus = True Then
             If Clients.Count > 0 Then
                 Try
-                    REM  Broadcast data to all clients
-                    REM To target one client,
-                    REM USAGE: If client.client.remoteendpoint.tostring.contains(IP As String) Then
-                    REM I am sorry for the lack of preparation for this project and in the video.
-                    REM I wrote 99% of this from the top of my head,  no one is perfect, bound to make mistakes.
+                    'Broadcast data to all clients
+                    'To target one client,
+                    'USAGE: If client.client.remoteendpoint.tostring.contains(IP As String)
                     For Each Client As TcpClient In Clients
                         Dim TX1 As New StreamWriter(Client.GetStream)
-                        ''   Dim RX1 As New StreamReader(Client.GetStream)
                         TX1.WriteLine(Data)
                         TX1.Flush()
                     Next
@@ -138,10 +126,4 @@ Public Class Form1
         End If
         Return True
     End Function
-    REM   Timer1 enabled = true
-    REM Just if you want to always have a count of connected clients.
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
-
-    End Sub
 End Class

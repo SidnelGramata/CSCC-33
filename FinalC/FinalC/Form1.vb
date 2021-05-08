@@ -6,10 +6,9 @@ Public Class Form1
     Dim RX As StreamReader
     Dim TX As StreamWriter
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        REM Connect Button
+        'Connect Button
         Try
-            REM IP, Port
-            REM If port is in a textbox, use: integer.parse(textbox1.text)  instead of the port number vvv
+            'IP, Port
             Client = New TcpClient("127.0.0.1", 4305)
             If Client.GetStream.CanRead = True Then
                 RX = New StreamReader(Client.GetStream)
@@ -23,7 +22,7 @@ Public Class Form1
         End Try
     End Sub
     Function Connected()
-        REM Has connected to server and now listening for data from the server
+        'Has connected to server and now listening for data from the server
         If RX.BaseStream.CanRead = True Then
             Try
                 While RX.BaseStream.CanRead = True
@@ -42,12 +41,12 @@ Public Class Form1
         Return True
     End Function
     Function MSG1(ByVal Data As String)
-        REM Creates a messageBox for new threads to stop freezing
+        'Creates a messageBox for new threads to stop freezing
         MsgBox(Data)
         Return True
     End Function
-    Private Sub TextBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown
-        REM When you press enter on the textbox to send the message
+    Private Sub TextBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown, TextBox2.KeyDown
+        'When you press enter on the textbox to send the message
         If e.KeyCode = Keys.Enter Then
             e.SuppressKeyPress = True
             If TextBox1.Text.Length > 0 Then
@@ -57,7 +56,7 @@ Public Class Form1
         End If
     End Sub
     Function SendToServer(ByVal Data As String)
-        REM Send a message to the server
+        'Send a message to the server
         Try
             TX.WriteLine(Data)
             TX.Flush()
@@ -68,39 +67,27 @@ Public Class Form1
     End Function
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        REM Stops crossthreadingIssues
+        'Stops crossthreadingIssues
         CheckForIllegalCrossThreadCalls = False
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        REM Disconnect Button
-        Try
-            Client.Close()
-            RichTextBox1.Text += "Connection Ended" + vbNewLine
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
-    End Sub
-
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        If TextBox1.Text.Length > 0 Then
-            SendToServer(TextBox1.Text + " Increased")
+        If TextBox1.Text.Length > 0 And TextBox2.Text.Length > 0 Then
+            SendToServer("(Warehouse 1) " + TextBox1.Text + " Increased by " + TextBox2.Text)
             TextBox1.Clear()
+            TextBox2.Clear()
+        Else
+            MsgBox("Must enter input")
         End If
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        If TextBox1.Text.Length > 0 Then
-            SendToServer(TextBox1.Text + " Decreased")
+        If TextBox1.Text.Length > 0 And TextBox2.Text.Length > 0 Then
+            SendToServer("(Warehouse 1) " + TextBox1.Text + " Decreased by " + TextBox2.Text)
             TextBox1.Clear()
+            TextBox2.Clear()
+        Else
+            MsgBox("Must enter input")
         End If
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
     End Sub
 End Class
